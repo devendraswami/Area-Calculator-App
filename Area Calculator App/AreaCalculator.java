@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 
 
-abstract class Parent
+abstract class Shape
 {
     
     float area;
@@ -18,7 +18,7 @@ abstract class Parent
 }
     
 
-    class Rectangle extends Parent
+    class Rectangle extends Shape
     {
         float length;
         float breadth;
@@ -44,7 +44,7 @@ abstract class Parent
 }
 
 
-class Square extends Parent
+class Square extends Shape
 {
     float side;
 
@@ -68,7 +68,7 @@ class Square extends Parent
 
 
 
-class Circle extends Parent
+class Circle extends Shape
 {
     float radius;
 
@@ -93,9 +93,9 @@ class Circle extends Parent
 
 
 
-class Poly
+class Geomatry
 {
-     void poly(Parent ref)
+     void poly(Shape ref)
      {
         ref.input();
         ref.compute();
@@ -113,18 +113,18 @@ public class AreaCalculator
     public static void main(String[] args) 
     {
 
-    Rectangle r1 = new Rectangle();
+    Rectangle rec = new Rectangle();
      
         
-     Square s1 = new Square();
+     Square sq = new Square();
 
-     Circle c1 = new Circle();
+     Circle cr = new Circle();
 
-     Poly p = new Poly();
+     Geomatry p = new Geomatry();
 
-     p.poly(r1);
-     p.poly(s1);
-     p.poly(c1);
+     p.poly(rec);
+     p.poly(sq);
+     p.poly(cr);
      
      
 
